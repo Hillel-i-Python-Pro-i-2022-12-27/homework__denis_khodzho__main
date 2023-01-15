@@ -13,35 +13,21 @@ d-homework-i-purge:
 
 .PHONY: d-run
 # Just run
-#Чтобы это работало необходим docker-compose.yaml - это файл конфигурации для docker-compose
-#Linux
-#d-run:
-#	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
-#		docker-compose up --build
-#Windows
 d-run:
-	@set "COMPOSE_DOCKER_CLI_BUILD=1" & set "DOCKER_BUILDKIT=1" & docker-compose build
-
+	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
+		docker-compose up --build
 
 .PHONY: d-stop
 # Stop services
-#Linux
-#d-stop:
-#	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
-#		docker-compose down
-#Windows
 d-stop:
-	@set "COMPOSE_DOCKER_CLI_BUILD=1" & set "DOCKER_BUILDKIT=1" & docker-compose down
+	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
+		docker-compose down
 
 .PHONY: d-purge
 # Purge all data related with services
-#Linux
-#d-purge:
-#	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
-#		docker-compose down --volumes --remove-orphans --rmi local --timeout 0
-#Windows
 d-purge:
-	@set "COMPOSE_DOCKER_CLI_BUILD=1" & set "DOCKER_BUILDKIT=1" & docker-compose down --volumes --remove-orphans --rmi local --timeout 0
+	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
+		docker-compose down --volumes --remove-orphans --rmi local --timeout 0
 
 
 .PHONY: init-dev
