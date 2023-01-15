@@ -7,8 +7,8 @@ black == 22.12.0
 #For checking code style
 flake8 == 6.0.0
 
-#NE PONIMAYU ZACHEM!
+#Нужен как модуль для работы Git hooks, по сути это поточная обработка кода перед commit-ом в local
 pre-commit == 2.21.0
 
-#NE PONIMAYU ZACHEM!
+#Removes unused imports and unused variables.
 autoflake == 2.0.0
