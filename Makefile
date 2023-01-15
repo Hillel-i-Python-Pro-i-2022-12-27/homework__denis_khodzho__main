@@ -12,6 +12,7 @@ d-homework-i-purge:
 .PHONY: d-run
 # Just run
 #Чтобы это работало необходим docker-compose.yaml - это файл конфигурации для docker-compose
+#Linux
 #d-run:
 #	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
 #		docker-compose up --build
@@ -22,6 +23,7 @@ d-run:
 
 .PHONY: d-stop
 # Stop services
+#Linux
 #d-stop:
 #	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
 #		docker-compose down
@@ -31,6 +33,7 @@ d-stop:
 
 .PHONY: d-purge
 # Purge all data related with services
+#Linux
 #d-purge:
 #	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
 #		docker-compose down --volumes --remove-orphans --rmi local --timeout 0
