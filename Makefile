@@ -2,11 +2,13 @@
 # Make all actions needed for run homework from zero.
 d-homework-i-run:
 	make d-run
+	docker run lesson_2-app
 
 .PHONY: d-homework-i-purge
 # Make all actions needed for purge homework related data.
 d-homework-i-purge:
 	@make d-purge
+	echo "docker image is deleted"
 
 
 .PHONY: d-run
