@@ -12,3 +12,9 @@ pre-commit == 2.21.0
 
 #Removes unused imports and unused variables.
 autoflake == 2.0.0
+
+#Names generator
+Faker==16.6.1
+
+#For web requests
+requests==2.28.2
