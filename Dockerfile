@@ -18,7 +18,10 @@ RUN pip install --upgrade pip && \
     pip install --requirement requirements.txt
 
 COPY --chown=${USER} ./main.py main.py
+COPY --chown=${USER} ./task_is task_is
+COPY --chown=${USER} ./tasks tasks
 
 USER ${USER}
 
+#docker run -i --entrypoint /bin/bash -t dz_5-app
 ENTRYPOINT ["python", "main.py"]

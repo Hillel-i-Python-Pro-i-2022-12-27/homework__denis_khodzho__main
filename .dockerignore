@@ -4,3 +4,5 @@
 # Exclude
 !main.py
 !requirements.txt
+!task_is
+!tasks
