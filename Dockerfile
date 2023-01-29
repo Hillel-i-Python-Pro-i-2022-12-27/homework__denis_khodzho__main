@@ -18,7 +18,6 @@ RUN pip install --upgrade pip && \
     pip install --requirement requirements.txt
 
 COPY --chown=${USER} ./main.py main.py
-#COPY --chown=${USER} ./application application
 
 USER ${USER}
 
